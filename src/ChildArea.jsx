@@ -9,10 +9,10 @@ const style = {
 // memo()...propsが変更されない限りは再レンダリングされない、という指定
 // 複数要素からできている、または肥大化が予想されるコンポーネントにはmemoを付けたい
 export const ChildArea = memo((props) => {
-    const { open } = props;
+    const { open, onClickClose } = props;
     console.log("rendering ChildArea.");
 
-    const data = [...Array(2000).keys()];
+    const data = [...Array(10).keys()];
     data.forEach(() => {
         console.log("...");
     });
@@ -22,6 +22,7 @@ export const ChildArea = memo((props) => {
             {open ? (
                 <div style={style}>
                     <p>子コンポーネント</p>
+                    <button onClick={onClickClose}>閉じる</button>
                 </div>
             ) : null}
         </>
