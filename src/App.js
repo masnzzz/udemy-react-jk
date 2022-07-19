@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { ChildArea } from "./ChildArea";
 
 export const App = () => {
@@ -9,8 +9,12 @@ export const App = () => {
 
   const onClickOpen = () => setOpen(!open);
 
-  // useCallback 第二引数に監視する配列を指定
+  // useCallback 第二引数に依存配列を指定
   const onClickClose = useCallback(() => setOpen(false), [setOpen]);
+
+  // useMemo...変数のメモ化, 第二引数は依存配列
+  const temp = useMemo(() => 1 + 3, []);
+  console.log(temp);
 
   return (
     <div className="App">
