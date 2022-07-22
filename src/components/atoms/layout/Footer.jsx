@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const Footer = () => {
@@ -6,8 +5,8 @@ export const Footer = () => {
         <SFooter>
             &copy; monsadmsaodcask Inc.
         </SFooter>
-    )
-}
+    );
+};
 
 const SFooter = styled.footer`
     background-color: #11999e;
@@ -17,5 +16,4 @@ const SFooter = styled.footer`
     position: fixed;
     bottom: 0;
     width: 100%;
-`
-
+`;
