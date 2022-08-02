@@ -10,6 +10,7 @@ export const UserIconWithName = (props) => {
         <SContainer>
             <SImage src={image} alt="profile" height={160} width={160} />
             <SName>{name}</SName>
+            {isAdmin && <SEdit>編集</SEdit>}
         </SContainer>
     )
 }
@@ -27,3 +28,8 @@ const SName = styled.p`
     font-weight: bold;
     margin: 0;
 `;
+const SEdit = styled.span`
+    text-decoration: underline;
+    color: #3d1ada;
+    cursor: pointer;
+`
