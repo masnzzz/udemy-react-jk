@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { UserIconWithName } from "../../molecules/user/UserIconWithName";
 
 export const UserCard = (props) => {
-    const { user, isAdmin } = props;
+    const { user } = props;
     return (
         <Card>
-            <UserIconWithName image={user.image} name={user.name} isAdmin={isAdmin} />
+            <UserIconWithName image={user.image} name={user.name} />
             <SDL>
                 <dl>
                     <dt>mail</dt>
